@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 379065182}
   - component: {fileID: 379065181}
   - component: {fileID: 379065180}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5ae4f68b7e374214b89353918a6ecc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4396,7 +4396,7 @@ GameObject:
   - component: {fileID: 521253330}
   - component: {fileID: 521253329}
   - component: {fileID: 521253328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4436,6 +4436,7 @@ MonoBehaviour:
   headAni: {fileID: 2066320484}
   bodyAni: {fileID: 1271713860}
   bodyRenderer: {fileID: 1271713861}
+  bulletPrefeb: {fileID: 1057212937679026159, guid: f929b83758fdb6d448f0443968d06315, type: 3}
 --- !u!61 &521253329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4663,7 +4664,7 @@ GameObject:
   - component: {fileID: 1271713862}
   - component: {fileID: 1271713861}
   - component: {fileID: 1271713860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4810,7 +4811,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5ae4f68b7e374214b89353918a6ecc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5047,7 +5048,7 @@ GameObject:
   - component: {fileID: 2066320482}
   - component: {fileID: 2066320483}
   - component: {fileID: 2066320484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
