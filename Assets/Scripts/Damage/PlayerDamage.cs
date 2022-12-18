@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDamage :MonoBehaviour
 {
-    [SerializeField] int HP;
+    [SerializeField] public int HP;
 
     SpriteRenderer[] sr;
 

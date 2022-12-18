@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer bodyRenderer;
     [SerializeField] GameObject bulletPrefeb;
 
+    EnemySpawn[] spawn;
+
+    GameManager gm;
+
     private bool isHo;
     private bool isVer;
     private bool cooldown = true;
@@ -26,6 +30,8 @@ public class Player : MonoBehaviour
 
     void Start() 
     {
+        spawn = GameObject.FindWithTag("spawn").GetComponents<EnemySpawn>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -128,7 +134,7 @@ public class Player : MonoBehaviour
             bodyAni.SetBool("moveVer",true);
         }
 
-        if(rb.velocity.x == 0 && rb.velocity.y == 0)
+        if (rb.velocity.x == 0 && rb.velocity.y == 0)
         {
             isHo = false;
             isVer = false;
@@ -203,6 +209,18 @@ public class Player : MonoBehaviour
             headAni.SetBool("isfront",false);
             headAni.SetBool("isback",false);
             headAni.SetBool("isleft",false);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Room")
+        {
+            gm.curRoom = collision.gameObject.name;
+            for(int i = 0 ;i < spawn.Length ;i++)
+            {
+                spawn[i].cancall = true;
+            }
         }
     }
 }

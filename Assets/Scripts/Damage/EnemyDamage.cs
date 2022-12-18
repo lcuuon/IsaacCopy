@@ -12,16 +12,31 @@ public class EnemyDamage : MonoBehaviour
 
     SpriteRenderer sr;
 
+    GameManager gm;
+    Map map;
+    Map tmp;
+
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        map = GameObject.Find(gm.curRoom).GetComponent<Map>();
+        tmp = map;
         ani = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        if(tmp != map)
+        {
+            map = GameObject.Find(gm.curRoom).GetComponent<Map>();
+            tmp = map;
+        }
+
         if(HP == 0)
         {
+            gameObject.layer = 10;
+            map.curEnemyCount--;
             HP = -1;
             GameObject blood = Instantiate(_blood);
             blood.transform.position = transform.position - new Vector3(0, 1);

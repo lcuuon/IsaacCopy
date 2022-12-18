@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8596750538870636832}
   m_Layer: 0
   m_Name: Spawn
-  m_TagString: Untagged
+  m_TagString: spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnMob: {fileID: 0}
+  cancall: 0
